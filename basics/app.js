@@ -14,7 +14,7 @@ const options = {
   'exposedHeaders':       'Access-Control-Allow-Method,Access-Control-Allow-Origin,Content-Type,Content-Length'
 
 };
-
+// ayyloo
 app.use(cors(options));
 
 // Route for GET request
