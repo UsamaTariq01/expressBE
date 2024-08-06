@@ -15,6 +15,6 @@ const initConfiguration=()=>{
         console.log(err);
         // throw new Error({message:'err while loading init configurations'});
     }
-
+// hello
 }
 module.exports = {initConfiguration};
