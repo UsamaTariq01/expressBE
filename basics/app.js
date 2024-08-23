@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const {initConfiguration} = require('./configs/config.global');
 const cors = require('cors');
-
 // Middleware to parse JSON bodies
 app.use(express.json());
 
@@ -22,6 +21,9 @@ app.get('/test', (req, res) => {
   res.send({message:'Hello, World!',status:200});
 });
 initConfiguration();
+require('./configs/config.sequelize');
+require('./configs/config.routes')(app);
+
 // Start the server
 app.listen(global?.config?.PORT ?? '3070', () => {
   console.log(`Server running at http://localhost:${global?.config?.PORT ?? '3070'}/`);
